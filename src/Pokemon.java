@@ -61,4 +61,6 @@ public class Pokemon {
     public double getVida(){
         return this.vida;
     }
+
+    public  int getVelocidad(){return this.velocidad;}
 }
