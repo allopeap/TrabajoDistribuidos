@@ -9,7 +9,7 @@ public class ListaPokemon {
     ListaPokemon(){
 
         Ataque a1 = new Ataque("Ascuas","fuego",100,20);
-        Ataque a2 = new Ataque("Arañazo","normal",100,30);
+        Ataque a2 = new Ataque("Arañazo","normal",20,30);
         Ataque a3 = new Ataque("Placaje","normal",100,40);
         Ataque a4 = new Ataque("Giro fuego","fuego",100,50);
         java.util.List<Ataque> l = new ArrayList<>();

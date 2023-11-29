@@ -143,9 +143,10 @@ public class PokemonGameGUI extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
+                ListaPokemon l = new ListaPokemon();
 
-                //Combate c = new Combate();
-               // PokemonGameGUI pg = new PokemonGameGUI(c);
+                Combate c = new Combate(l.getPokemons().get(0),l.getPokemons().get(1));
+                PokemonGameGUI pg = new PokemonGameGUI(c);
 
 
             }

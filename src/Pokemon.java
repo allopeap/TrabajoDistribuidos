@@ -44,6 +44,7 @@ public class Pokemon {
     }
 
     public boolean recibirDano(double d){
+        if(d==0){return false;}
         double danio = d-this.defensa;
         this.vida = this.vida-danio;
         if(this.vida<=0){
