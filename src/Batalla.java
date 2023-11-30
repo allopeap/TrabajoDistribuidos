@@ -56,6 +56,9 @@ public class Batalla extends Thread {
                 segundoIn=player1Input;
                 segundoOut=player1Output;
             }
+            primeroOut.writeObject(c);
+            segundoOut.writeObject(c);
+
             while (true){
                 primeroOut.writeObject(c);
                 segundoOut.writeObject(c);

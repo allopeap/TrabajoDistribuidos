@@ -1,6 +1,8 @@
 package src;
 
-public class Combate {
+import java.io.Serializable;
+
+public class Combate implements Serializable {
     Pokemon p1;
     Pokemon p2;
 

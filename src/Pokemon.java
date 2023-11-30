@@ -1,10 +1,11 @@
 package src;
 
 import javax.print.DocFlavor;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Random;
 
-public class Pokemon {
+public class Pokemon implements Serializable {
     private String nombre;
     private String tipo;
     private double vida;

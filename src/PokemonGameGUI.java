@@ -12,7 +12,14 @@ public class PokemonGameGUI extends JFrame {
     private JButton btnAttack1, btnAttack2, btnAttack3, btnAttack4;
     private JProgressBar progressBarPokemon1, progressBarPokemon2;
 
-    public PokemonGameGUI(Combate c) {
+    private boolean atacado = false;
+
+    private int numPoke;
+    private Combate c;
+
+    public PokemonGameGUI(Combate c2,int i) {
+        this.c=c2;
+        this.numPoke=i;
         // Configurar la ventana principal
         setTitle("Pokemon Battle");
         setSize(1920,1080 );
@@ -26,7 +33,11 @@ public class PokemonGameGUI extends JFrame {
         // Configurar el tamaño de los botones
         Dimension buttonSize = new Dimension(100, 30); // Ajustar según tus necesidades
 
-        List<Ataque> l = c.p1.getAtaques();
+        List<Ataque> l;
+        if(this.numPoke==1){
+             l = c.p1.getAtaques();
+        }else l = c.p2.getAtaques();
+
         btnAttack1 = new JButton(l.get(0).getNombre());
         btnAttack1.setPreferredSize(buttonSize);
 
@@ -63,9 +74,14 @@ public class PokemonGameGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Lógica para el ataque 1
+                if(numPoke==1){
+                    c.p2.recibirDano(c.p1.atacar(0));
+                    updateHealthBars(c.p2.getVida());
+                }else{
+                    c.p1.recibirDano(c.p2.atacar(0));
+                    updateHealthBars(c.p1.getVida());
+                }
 
-                c.p2.recibirDano(c.p1.atacar(0));
-                updateHealthBars(c.p2.getVida()); // Actualizar barras de vida después de un ataque
             }
         });
 
@@ -73,8 +89,13 @@ public class PokemonGameGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Lógica para el ataque 2
-                c.p2.recibirDano(c.p1.atacar(1));
-                updateHealthBars(c.p2.getVida());
+                if(numPoke==1){
+                    c.p2.recibirDano(c.p1.atacar(1));
+                    updateHealthBars(c.p2.getVida());
+                }else{
+                    c.p1.recibirDano(c.p2.atacar(1));
+                    updateHealthBars(c.p1.getVida());
+                }
             }
         });
 
@@ -82,8 +103,13 @@ public class PokemonGameGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Lógica para el ataque 3
-                c.p2.recibirDano(c.p1.atacar(2));
-                updateHealthBars(c.p2.getVida());
+                if(numPoke==1){
+                    c.p2.recibirDano(c.p1.atacar(2));
+                    updateHealthBars(c.p2.getVida());
+                }else{
+                    c.p1.recibirDano(c.p2.atacar(2));
+                    updateHealthBars(c.p1.getVida());
+                }
             }
         });
 
@@ -91,8 +117,13 @@ public class PokemonGameGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Lógica para el ataque 4
-                c.p2.recibirDano(c.p1.atacar(3));
-                updateHealthBars(c.p2.getVida());
+                if(numPoke==1){
+                    c.p2.recibirDano(c.p1.atacar(3));
+                    updateHealthBars(c.p2.getVida());
+                }else{
+                    c.p1.recibirDano(c.p2.atacar(3));
+                    updateHealthBars(c.p1.getVida());
+                }
             }
         });
 
@@ -102,8 +133,32 @@ public class PokemonGameGUI extends JFrame {
     private void updateHealthBars(double d) {
 
 
+        if(numPoke==1){
+            progressBarPokemon2.setValue((int) d);
+        }else{
+            progressBarPokemon1.setValue((int) d);
+        }
 
-        progressBarPokemon2.setValue((int) d);
+    }
+
+    public void esperarTurno(){
+        this.btnAttack1.setVisible(false);
+        this.btnAttack2.setVisible(false);
+        this.btnAttack3.setVisible(false);
+        this.btnAttack4.setVisible(false);
+
+    }
+
+    public Combate turno(){
+        this.btnAttack1.setVisible(true);
+        this.btnAttack2.setVisible(true);
+        this.btnAttack3.setVisible(true);
+        this.btnAttack4.setVisible(true);
+        while (atacado!=true){
+
+        }
+        atacado=false;
+        return c;
     }
 
 
@@ -145,12 +200,16 @@ public class PokemonGameGUI extends JFrame {
             public void run() {
                 ListaPokemon l = new ListaPokemon();
 
-                Combate c = new Combate(l.getPokemons().get(0),l.getPokemons().get(1));
-                PokemonGameGUI pg = new PokemonGameGUI(c);
+                //Combate c = new Combate(l.getPokemons().get(0),l.getPokemons().get(1));
+               // PokemonGameGUI pg = new PokemonGameGUI(c);
 
 
             }
         });
+    }
+
+    public void setC(Combate c) {
+        this.c = c;
     }
 }
 

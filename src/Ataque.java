@@ -1,8 +1,9 @@
 package src;
 
 import javax.print.DocFlavor;
+import java.io.Serializable;
 
-public class Ataque {
+public class Ataque implements Serializable {
     private String nombre;
     private String tipo;
     private int precision;
