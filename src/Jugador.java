@@ -33,6 +33,7 @@ public class Jugador {
 
             // Envía el Pokémon elegido al servidor
             out.writeObject(chosenPokemon);
+            out.flush();
 
             c = (Combate) in.readObject();
 
@@ -45,6 +46,7 @@ public class Jugador {
                 pkgui.setC(c);
                 c = pkgui.turno();
                 out.writeObject(c);
+                out.flush();
             }
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();

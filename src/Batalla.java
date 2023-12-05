@@ -36,8 +36,10 @@ public class Batalla extends Thread {
         ) {
             List<Pokemon> pokemons = new ListaPokemon().getPokemons();
             player1Output.writeObject(pokemons);
+            player1Output.flush();
             Pokemon p1 = (Pokemon) player1Input.readObject();
             player2Output.writeObject(pokemons);
+            player2Output.flush();
             Pokemon p2 = (Pokemon) player2Input.readObject();
             c = new Combate(p1,p2);
 
@@ -62,14 +64,18 @@ public class Batalla extends Thread {
             while (true){
                 primeroOut.writeObject(c);
                 segundoOut.writeObject(c);
+                primeroOut.flush();
+                segundoOut.flush();
 
                 primeroOut.writeObject(c);
+                primeroOut.flush();
                 c = (Combate) primeroIn.readObject();
                 if(c.p2.getVida()<=0){
                     break;
                 }
 
                 segundoOut.writeObject(c);
+                segundoOut.flush();
                 c = (Combate) segundoIn.readObject();
                 if(c.p1.getVida()<=0){
                     break;

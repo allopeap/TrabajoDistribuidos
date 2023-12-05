@@ -81,6 +81,7 @@ public class PokemonGameGUI extends JFrame {
                     c.p1.recibirDano(c.p2.atacar(0));
                     updateHealthBars(c.p1.getVida());
                 }
+                atacado = true;
 
             }
         });
@@ -96,6 +97,7 @@ public class PokemonGameGUI extends JFrame {
                     c.p1.recibirDano(c.p2.atacar(1));
                     updateHealthBars(c.p1.getVida());
                 }
+                atacado = true;
             }
         });
 
@@ -110,6 +112,7 @@ public class PokemonGameGUI extends JFrame {
                     c.p1.recibirDano(c.p2.atacar(2));
                     updateHealthBars(c.p1.getVida());
                 }
+                atacado = true;
             }
         });
 
@@ -124,6 +127,7 @@ public class PokemonGameGUI extends JFrame {
                     c.p1.recibirDano(c.p2.atacar(3));
                     updateHealthBars(c.p1.getVida());
                 }
+                atacado = true;
             }
         });
 
