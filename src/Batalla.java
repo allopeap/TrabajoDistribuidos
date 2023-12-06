@@ -50,6 +50,7 @@ public class Batalla extends Thread {
                 primeroOut = player1Output;
                 segundoIn=player2Input;
                 segundoOut=player2Output;
+
             }else {
                 this.primero=player2Socket;
                 this.segundo=player1Socket;
@@ -57,32 +58,33 @@ public class Batalla extends Thread {
                 primeroOut = player2Output;
                 segundoIn=player1Input;
                 segundoOut=player1Output;
+
             }
             primeroOut.writeObject(c);
             segundoOut.writeObject(c);
+            double d = 0;
 
             while (true){
-                primeroOut.writeObject(c);
-                segundoOut.writeObject(c);
-                primeroOut.flush();
-                segundoOut.flush();
 
-                primeroOut.writeObject(c);
+
+                primeroOut.writeDouble(p1.getVida());
                 primeroOut.flush();
-                c = (Combate) primeroIn.readObject();
-                if(c.p2.getVida()<=0){
+
+                d =  primeroIn.readDouble();
+                if(d<=0){
+                    segundoOut.writeDouble(0);
                     break;
                 }
-
-                segundoOut.writeObject(c);
+                this.c.p2.setVida(d);
+                segundoOut.writeDouble(d);
                 segundoOut.flush();
-                c = (Combate) segundoIn.readObject();
-                if(c.p1.getVida()<=0){
+
+                d =  segundoIn.readDouble();
+                if(d<=0){
+                    primeroOut.writeDouble(0);
                     break;
                 }
-
-
-
+                this.c.p1.setVida(d);
 
             }
 

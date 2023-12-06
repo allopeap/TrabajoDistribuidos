@@ -64,5 +64,18 @@ public class Pokemon implements Serializable {
         return this.vida;
     }
 
+    public void setVida(double vida) {
+        this.vida = vida;
+    }
+
     public  int getVelocidad(){return this.velocidad;}
+
+    public boolean equals(Pokemon p){
+        if(p.getNombre().compareTo(this.nombre)==0){
+            return true;
+        }else return false;
+    }
+    public String toString(){
+        return (this.nombre+ " Vida:" + this.vida);
+    }
 }
