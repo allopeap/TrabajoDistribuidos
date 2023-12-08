@@ -30,6 +30,7 @@ public class Jugador {
     public Jugador() {
 
         try {
+            System.out.println("Esperando rival");
             socket = new Socket(InetAddress.getLocalHost(), SERVER_PORT);
             out = new ObjectOutputStream(socket.getOutputStream());
             in = new ObjectInputStream(socket.getInputStream());
@@ -45,6 +46,7 @@ public class Jugador {
 
             }while (tipoPartida!=1 && tipoPartida!=2);
             List<Pokemon> availablePokemons = (List<Pokemon>) in.readObject();
+
             chosenPokemon = choosePokemon(availablePokemons);
 
             // Envía el Pokémon elegido al servidor
@@ -165,9 +167,21 @@ public class Jugador {
     }
 
     private Pokemon choosePokemon(List<Pokemon> availablePokemons) {
-        System.out.println("Introduce num de pokemon");
+
+        int j = 0;
+        int i = 1;
+        while (j<availablePokemons.size()){
+            if(i==4){
+                System.out.print("\r\n");
+                i=1;
+            }
+                System.out.print(j+1+ ": " + availablePokemons.get(j).getNombre()+"  ");
+            j++;
+            i++;
+        }
+        System.out.println("\r\nIntroduce el numero del pokemon que quieras: ");
         Scanner s = new Scanner(System.in);
-        return (availablePokemons.get(s.nextInt()));
+        return (availablePokemons.get(s.nextInt()-1));
     }
 
 

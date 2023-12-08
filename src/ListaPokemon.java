@@ -30,7 +30,7 @@ public class ListaPokemon {
 
         try {
 
-            File xmlFile = new File("src/pokedex.xml");
+            File xmlFile = new File("./src/pokedex.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(xmlFile);
@@ -69,7 +69,7 @@ public class ListaPokemon {
                     int precision = Integer.parseInt(getTextContent(ataqueElement, "precision"));
 
 
-                    Ataque a = new Ataque(nombreAtaque, tipoAtaque, poder, precision);
+                    Ataque a = new Ataque(nombreAtaque, tipoAtaque, precision, poder);
 
 
                     lat.add(a);

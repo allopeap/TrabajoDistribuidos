@@ -30,23 +30,22 @@ public class Pokemon implements Serializable {
     }
     public double atacar(int at){
         Ataque a = this.ataques.get(at);
-        double dano = this.ataque * a.getPotencia();
+        double dano = a.getPotencia();
         if(this.tipo.equals(a.getTipo())){
-            dano =  (dano*1.5);
+            dano =  (dano*1.2);
         }
         Random r = new Random();
         int p = r.nextInt(100);
         if(p>a.getPrecision()){
             return 0;
         }
-        dano = dano/100;
-        return dano+this.ataque;
+        return dano*(1+(this.ataque/100));
 
     }
 
     public boolean recibirDano(double d){
         if(d==0){return false;}
-        double danio = d-this.defensa;
+        double danio = d*(1-(this.ataque/100));
         this.vida = this.vida-danio;
         if(this.vida<=0){
             return true;
