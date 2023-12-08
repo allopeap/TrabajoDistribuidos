@@ -1,0 +1,435 @@
+<!DOCTYPE pokemones SYSTEM "./src/pokemones.dtd">
+<pokemones>
+    <pokemon>
+        <nombre>Bulbasaur</nombre>
+        <tipo>Planta</tipo>
+        <vida>100</vida>
+        <ataque>49</ataque>
+        <defensa>49</defensa>
+        <velocidad>45</velocidad>
+        <ataques>
+            <movimiento>
+                <nombreAtaque>Látigo Cepa</nombreAtaque>
+                <tipoAtaque>Planta</tipoAtaque>
+                <poder>35</poder>
+                <precision>100</precision>
+
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Placaje</nombreAtaque>
+                <tipoAtaque>Normal</tipoAtaque>
+                <poder>40</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Absorber</nombreAtaque>
+                <tipoAtaque>Planta</tipoAtaque>
+                <poder>20</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Arañazo</nombreAtaque>
+                <tipoAtaque>Normal</tipoAtaque>
+                <poder>25</poder>
+                <precision>100</precision>
+            </movimiento>
+        </ataques>
+    </pokemon>
+
+    <pokemon>
+    <nombre>Charmander</nombre>
+    <tipo>Fuego</tipo>
+    <vida>100</vida>
+    <ataque>57</ataque>
+    <defensa>34</defensa>
+    <velocidad>55</velocidad>
+    <ataques>
+        <movimiento>
+            <nombreAtaque>Ascuas</nombreAtaque>
+            <tipoAtaque>Fuego</tipoAtaque>
+            <poder>20</poder>
+            <precision>100</precision>
+
+        </movimiento>
+        <movimiento>
+            <nombreAtaque>Placaje</nombreAtaque>
+            <tipoAtaque>Normal</tipoAtaque>
+            <poder>40</poder>
+            <precision>100</precision>
+        </movimiento>
+        <movimiento>
+            <nombreAtaque>Giro fuego</nombreAtaque>
+            <tipoAtaque>Fuego</tipoAtaque>
+            <poder>35</poder>
+            <precision>100</precision>
+        </movimiento>
+        <movimiento>
+            <nombreAtaque>Arañazo</nombreAtaque>
+            <tipoAtaque>Normal</tipoAtaque>
+            <poder>25</poder>
+            <precision>100</precision>
+        </movimiento>
+    </ataques>
+    </pokemon>
+
+    <pokemon>
+        <nombre>Squirtle</nombre>
+        <tipo>Agua</tipo>
+        <vida>100</vida>
+        <ataque>50</ataque>
+        <defensa>36</defensa>
+        <velocidad>70</velocidad>
+        <ataques>
+            <movimiento>
+                <nombreAtaque>Pistola agua</nombreAtaque>
+                <tipoAtaque>Agua</tipoAtaque>
+                <poder>20</poder>
+                <precision>100</precision>
+
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Placaje</nombreAtaque>
+                <tipoAtaque>Normal</tipoAtaque>
+                <poder>40</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Hidro pulso</nombreAtaque>
+                <tipoAtaque>Agua</tipoAtaque>
+                <poder>35</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Arañazo</nombreAtaque>
+                <tipoAtaque>Normal</tipoAtaque>
+                <poder>25</poder>
+                <precision>100</precision>
+            </movimiento>
+        </ataques>
+    </pokemon>
+
+    <pokemon>
+        <nombre>Machop</nombre>
+        <tipo>Lucha</tipo>
+        <vida>100</vida>
+        <ataque>75</ataque>
+        <defensa>15</defensa>
+        <velocidad>40</velocidad>
+        <ataques>
+            <movimiento>
+                <nombreAtaque>Golpe roca</nombreAtaque>
+                <tipoAtaque>Lucha</tipoAtaque>
+                <poder>20</poder>
+                <precision>100</precision>
+
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Placaje</nombreAtaque>
+                <tipoAtaque>Normal</tipoAtaque>
+                <poder>40</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Ultra puño</nombreAtaque>
+                <tipoAtaque>Lucha</tipoAtaque>
+                <poder>43</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Doble golpe</nombreAtaque>
+                <tipoAtaque>Normal</tipoAtaque>
+                <poder>15</poder>
+                <precision>100</precision>
+            </movimiento>
+        </ataques>
+    </pokemon>
+
+    <pokemon>
+        <nombre>Magikarp</nombre>
+        <tipo>Agua</tipo>
+        <vida>100</vida>
+        <ataque>15</ataque>
+        <defensa>15</defensa>
+        <velocidad>100</velocidad>
+        <ataques>
+            <movimiento>
+                <nombreAtaque>Salpicadura</nombreAtaque>
+                <tipoAtaque>Normal</tipoAtaque>
+                <poder>0</poder>
+                <precision>100</precision>
+
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Placaje</nombreAtaque>
+                <tipoAtaque>Normal</tipoAtaque>
+                <poder>40</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Salpicadura</nombreAtaque>
+                <tipoAtaque>Normal</tipoAtaque>
+                <poder>0</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Salpicadura</nombreAtaque>
+                <tipoAtaque>Normal</tipoAtaque>
+                <poder>0</poder>
+                <precision>100</precision>
+            </movimiento>
+        </ataques>
+    </pokemon>
+
+    <pokemon>
+        <nombre>Gengar</nombre>
+        <tipo>Fantasma</tipo>
+        <vida>100</vida>
+        <ataque>60</ataque>
+        <defensa>30</defensa>
+        <velocidad>60</velocidad>
+        <ataques>
+            <movimiento>
+                <nombreAtaque>Bola sombra</nombreAtaque>
+                <tipoAtaque>Fantasma</tipoAtaque>
+                <poder>60</poder>
+                <precision>100</precision>
+
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Puño sombra</nombreAtaque>
+                <tipoAtaque>Fantasma</tipoAtaque>
+                <poder>25</poder>
+                <precision>75</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Lengüetazo</nombreAtaque>
+                <tipoAtaque>Fantasma</tipoAtaque>
+                <poder>35</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Infortunio</nombreAtaque>
+                <tipoAtaque>Fantasma</tipoAtaque>
+                <poder>25</poder>
+                <precision>100</precision>
+            </movimiento>
+        </ataques>
+    </pokemon>
+
+    <pokemon>
+        <nombre>Alakazam</nombre>
+        <tipo>Psiquico</tipo>
+        <vida>100</vida>
+        <ataque>65</ataque>
+        <defensa>25</defensa>
+        <velocidad>62</velocidad>
+        <ataques>
+            <movimiento>
+                <nombreAtaque>Psiquico</nombreAtaque>
+                <tipoAtaque>Psiquico</tipoAtaque>
+                <poder>61</poder>
+                <precision>100</precision>
+
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Puño sombra</nombreAtaque>
+                <tipoAtaque>Fantasma</tipoAtaque>
+                <poder>25</poder>
+                <precision>75</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Cabezazo zen</nombreAtaque>
+                <tipoAtaque>Psiquico</tipoAtaque>
+                <poder>35</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Infortunio</nombreAtaque>
+                <tipoAtaque>Fantasma</tipoAtaque>
+                <poder>25</poder>
+                <precision>100</precision>
+            </movimiento>
+        </ataques>
+    </pokemon>
+
+    <pokemon>
+        <nombre>Articuno</nombre>
+        <tipo>Hielo</tipo>
+        <vida>100</vida>
+        <ataque>65</ataque>
+        <defensa>39</defensa>
+        <velocidad>62</velocidad>
+        <ataques>
+            <movimiento>
+                <nombreAtaque>Ventisca</nombreAtaque>
+                <tipoAtaque>Hielo</tipoAtaque>
+                <poder>65</poder>
+                <precision>80</precision>
+
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Ataque ala</nombreAtaque>
+                <tipoAtaque>Volador</tipoAtaque>
+                <poder>25</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Rayo hielo</nombreAtaque>
+                <tipoAtaque>Hielo</tipoAtaque>
+                <poder>45</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Nieve polvo</nombreAtaque>
+                <tipoAtaque>Hielo</tipoAtaque>
+                <poder>25</poder>
+                <precision>100</precision>
+            </movimiento>
+        </ataques>
+    </pokemon>
+
+    <pokemon>
+        <nombre>Zapdos</nombre>
+        <tipo>Electrico</tipo>
+        <vida>100</vida>
+        <ataque>65</ataque>
+        <defensa>30</defensa>
+        <velocidad>75</velocidad>
+        <ataques>
+            <movimiento>
+                <nombreAtaque>Rayo</nombreAtaque>
+                <tipoAtaque>Electrico</tipoAtaque>
+                <poder>66</poder>
+                <precision>100</precision>
+
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Trueno</nombreAtaque>
+                <tipoAtaque>Electrico</tipoAtaque>
+                <poder>80</poder>
+                <precision>35</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Ataque ala</nombreAtaque>
+                <tipoAtaque>Volador</tipoAtaque>
+                <poder>25</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Chispa</nombreAtaque>
+                <tipoAtaque>Electrico</tipoAtaque>
+                <poder>30</poder>
+                <precision>100</precision>
+            </movimiento>
+        </ataques>
+    </pokemon>
+
+    <pokemon>
+        <nombre>Moltres</nombre>
+        <tipo>Fuego</tipo>
+        <vida>100</vida>
+        <ataque>70</ataque>
+        <defensa>25</defensa>
+        <velocidad>30</velocidad>
+        <ataques>
+            <movimiento>
+                <nombreAtaque>Lanza llamas</nombreAtaque>
+                <tipoAtaque>Fuego</tipoAtaque>
+                <poder>65</poder>
+                <precision>100</precision>
+
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Ascuas</nombreAtaque>
+                <tipoAtaque>Fuego</tipoAtaque>
+                <poder>25</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Ataque ala</nombreAtaque>
+                <tipoAtaque>Volador</tipoAtaque>
+                <poder>35</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Llamarada</nombreAtaque>
+                <tipoAtaque>Fuego</tipoAtaque>
+                <poder>80</poder>
+                <precision>50</precision>
+            </movimiento>
+        </ataques>
+    </pokemon>
+
+    <pokemon>
+        <nombre>Mewtwo</nombre>
+        <tipo>Psiquico</tipo>
+        <vida>100</vida>
+        <ataque>80</ataque>
+        <defensa>50</defensa>
+        <velocidad>62</velocidad>
+        <ataques>
+            <movimiento>
+                <nombreAtaque>Psiquico</nombreAtaque>
+                <tipoAtaque>Psiquico</tipoAtaque>
+                <poder>61</poder>
+                <precision>100</precision>
+
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Puño sombra</nombreAtaque>
+                <tipoAtaque>Fantasma</tipoAtaque>
+                <poder>25</poder>
+                <precision>75</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Cabezazo zen</nombreAtaque>
+                <tipoAtaque>Psiquico</tipoAtaque>
+                <poder>35</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Infortunio</nombreAtaque>
+                <tipoAtaque>Fantasma</tipoAtaque>
+                <poder>25</poder>
+                <precision>100</precision>
+            </movimiento>
+        </ataques>
+    </pokemon>
+
+    <pokemon>
+        <nombre>Mew</nombre>
+        <tipo>Psiquico</tipo>
+        <vida>100</vida>
+        <ataque>50</ataque>
+        <defensa>50</defensa>
+        <velocidad>150</velocidad>
+        <ataques>
+            <movimiento>
+                <nombreAtaque>Psiquico</nombreAtaque>
+                <tipoAtaque>Psiquico</tipoAtaque>
+                <poder>61</poder>
+                <precision>100</precision>
+
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Puño sombra</nombreAtaque>
+                <tipoAtaque>Fantasma</tipoAtaque>
+                <poder>25</poder>
+                <precision>75</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Cabezazo zen</nombreAtaque>
+                <tipoAtaque>Psiquico</tipoAtaque>
+                <poder>35</poder>
+                <precision>100</precision>
+            </movimiento>
+            <movimiento>
+                <nombreAtaque>Guillotina</nombreAtaque>
+                <tipoAtaque>Normal</tipoAtaque>
+                <poder>500</poder>
+                <precision>5</precision>
+            </movimiento>
+        </ataques>
+    </pokemon>
+
+</pokemones>

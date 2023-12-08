@@ -34,7 +34,8 @@ public class Batalla extends Thread {
                 ObjectOutputStream player2Output = new ObjectOutputStream(player2Socket.getOutputStream());
                 ObjectInputStream player2Input = new ObjectInputStream(player2Socket.getInputStream())
         ) {
-            List<Pokemon> pokemons = new ListaPokemon().getPokemons();
+            ListaPokemon lp = new ListaPokemon();
+            List<Pokemon> pokemons = lp.getPokemons();
             player1Output.writeObject(pokemons);
             player1Output.flush();
             Pokemon p1 = (Pokemon) player1Input.readObject();
