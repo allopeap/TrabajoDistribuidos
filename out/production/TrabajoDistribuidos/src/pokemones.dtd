@@ -1,0 +1,15 @@
+<!ELEMENT pokemones (pokemon+)>
+<!ELEMENT pokemon (nombre, tipo, vida, ataque, defensa, velocidad, ataques)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT tipo (#PCDATA)>
+        <!ELEMENT vida (#PCDATA)>
+        <!ELEMENT ataque (#PCDATA)>
+        <!ELEMENT defensa (#PCDATA)>
+        <!ELEMENT velocidad (#PCDATA)>
+        <!ELEMENT ataques (movimiento+)>
+        <!ELEMENT movimiento (nombreAtaque, tipoAtaque, poder,precision)>
+        <!ELEMENT nombreAtaque (#PCDATA)>
+        <!ELEMENT tipoAtaque (#PCDATA)>
+        <!ELEMENT poder (#PCDATA)>
+        <!ELEMENT precision (#PCDATA)>
+
