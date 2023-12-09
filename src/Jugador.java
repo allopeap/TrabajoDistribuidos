@@ -57,6 +57,7 @@ public class Jugador {
 
 
             switch (tipoPartida){
+                //Partida con interfaz grafica, falla si se presionan todos los botones muy rapido.
                 case 1:{
 
                     // Configurar la interfaz gráfica
@@ -96,6 +97,7 @@ public class Jugador {
                     break;
                 }
                 case 2:{
+                    //Partida en consola
                     while (true){
                         System.out.println("Esperando a tu turno");
 
@@ -131,12 +133,18 @@ public class Jugador {
                             c.p2.recibirDano(c.p1.atacar(ataque-1));
                             if(c.p2.getVida()<=0){
                                 System.out.println("Has ganado");
+                                out.writeDouble(c.p2.getVida());
+                                out.flush();
+                                break;
                             }
                             out.writeDouble(c.p2.getVida());
                         }else {
                             c.p1.recibirDano(c.p2.atacar(ataque-1));
                             if(c.p1.getVida()<=0){
                                 System.out.println("Has ganado");
+                                out.writeDouble(c.p2.getVida());
+                                out.flush();
+                                break;
                             }
                             out.writeDouble(c.p1.getVida());
                         }
@@ -153,6 +161,16 @@ public class Jugador {
             e.printStackTrace();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
+        }
+        finally {
+            if(socket!=null){
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
         }
     }
 

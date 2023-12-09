@@ -63,6 +63,8 @@ public class Batalla extends Thread {
             }
             primeroOut.writeObject(c);
             segundoOut.writeObject(c);
+            segundoOut.flush();
+            primeroOut.flush();
             double d = 0;
 
             while (true){
@@ -74,6 +76,10 @@ public class Batalla extends Thread {
                 d =  primeroIn.readDouble();
                 if(d<=0){
                     segundoOut.writeDouble(0);
+                    primeroOut.writeDouble(0);
+                    segundoOut.flush();
+                    primeroOut.flush();
+                    System.out.println("Partida terminada, ha ganado el jugador 2");
                     break;
                 }
                 this.c.p2.setVida(d);
@@ -82,7 +88,11 @@ public class Batalla extends Thread {
 
                 d =  segundoIn.readDouble();
                 if(d<=0){
+                    segundoOut.writeDouble(0);
                     primeroOut.writeDouble(0);
+                    segundoOut.flush();
+                    primeroOut.flush();
+                    System.out.println("Partida terminada, ha ganado el jugador 2");
                     break;
                 }
                 this.c.p1.setVida(d);

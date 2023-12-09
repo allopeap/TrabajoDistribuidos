@@ -26,8 +26,8 @@ public class PokemonGameGUI extends JFrame {
         setLayout(new BorderLayout());
 
         // Inicialización de componentes
-        pokemonImageLabel1 = new JLabel(new ImageIcon("./images/" + c.p1.getNombre() + ".png"));
-        pokemonImageLabel2 = new JLabel(new ImageIcon("./images/" + c.p2.getNombre() + ".png"));
+        pokemonImageLabel1 = new JLabel(new ImageIcon("./src/images/" + c.p1.getNombre() + ".png"));
+        pokemonImageLabel2 = new JLabel(new ImageIcon("./src/images/" + c.p2.getNombre() + ".png"));
         List<Ataque> l = null;
         if (this.jugador == 1) {
             l = c.p1.getAtaques();
