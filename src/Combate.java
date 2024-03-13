@@ -12,3 +12,4 @@ public class Combate implements Serializable {
         this.p2=p2;
     }
 }
+//lol
